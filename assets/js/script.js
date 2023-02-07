@@ -13,7 +13,7 @@ form.addEventListener('submit', event => {
   var city = cityInput.value;
 
   // Get current weather data for the city
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d7e152a5453fb10df19e8fb8e4c26412`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d7e152a5453fb10df19e8fb8e4c26412&units=metric`)
     .then(response => response.json())
     .then(data => {
       var date = new Date(data.dt * 1000);
