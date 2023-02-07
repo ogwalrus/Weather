@@ -1,6 +1,6 @@
 var form = document.querySelector('form');
-var cityInput = document.querySelector('#city-search');
-var currentWeather = document.querySelector('#current-weather');
+var cityInput = document.querySelector('#search');
+var currentWeather = document.querySelector('#current');
 var forecast = document.querySelector('#forecast');
 var searchHistory = document.querySelector('#search-history');
 var dateElement = document.querySelector('#date');
@@ -18,7 +18,7 @@ form.addEventListener('submit', event => {
     .then(data => {
       var date = new Date(data.dt * 1000);
       var dateString = date.toLocaleDateString();
-
+      console.log(data);
       // Update the page with current weather data
       document.querySelector('#city-name').innerText = data.name;
       dateElement.innerText = dateString;
@@ -37,6 +37,7 @@ form.addEventListener('submit', event => {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
     .then(response => response.json())
     .then(data => {
+        console.log(data);
         // Loop through the forecast data and update the page
         data.list.filter((forecastData, index, arr) => {
           return new Date(forecastData.dt_txt).toDateString() !== new Date(arr[index - 1]?.dt_txt).toDateString();
