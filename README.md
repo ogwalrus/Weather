@@ -17,3 +17,10 @@ Use the switch button to toggle between Celsius and Fahrenheit
 The weather data is provided by an API and is updated every hour to ensure accurate information.
 
 We hope you enjoy using Weather Forecast!
+### Collaborators
+This project was worked on in a group by <br/>
+https://github.com/ogwalrus <br/>
+https://github.com/NickJ13 <br/>
+https://github.com/mekael18 <br/>
+https://github.com/NyqEvo <br/>
+https://github.com/ekirbs
